@@ -109,7 +109,7 @@ def delete_product(
 # end def
 
 
-@router.put("/products/{product_id}/toggle-active", response_model=Product)
+@router.put("/{product_id}/toggle-active", response_model=Product)
 def toggle_product_active_status(
     product_id: int,
     db: Session = Depends(get_db),
